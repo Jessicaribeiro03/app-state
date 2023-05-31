@@ -1,12 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <TouchableHighlight style={styles.button} onPress={() => {}}>
+        <Text
+          style={{color:'#fff', fontSize:15, textAlign:'center'}}>
+            Foto
+        </Text>
+      </TouchableHighlight>
   );
 }
 
@@ -16,5 +18,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  button:{
+    justifyContent: 'center',
+    alignItens:'center',
+    elevation:15,
+    backgroundColor: '#008080',
+    width:100,
+    height: 100,
+    borderRadius: 100,
+    position: 'absolute',
+    bottom: 50,
+    margin:150,
   },
 });
